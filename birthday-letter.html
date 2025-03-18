@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Letter To You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .letter-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #ff6b95, #80bfff);
+        }
+        
+        h1 {
+            font-family: Futura, 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff6b95;
+            text-align: center;
+        }
+        
+        .date {
+            text-align: right;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #888;
+        }
+        
+        .greeting {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            color: #555;
+        }
+        
+        .letter-content {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .letter-content p {
+            margin-bottom: 20px;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: right;
+            margin-top: 40px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #80bfff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #ff6b95;
+            transform: translateX(-5px);
+        }
+        
+        .back-link:before {
+            content: '←';
+            margin-right: 5px;
+        }
+        
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 107, 149, 0.1);
+            transform: rotate(45deg);
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 107, 149, 0.1);
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .heart:before {
+            top: -7.5px;
+            left: 0;
+        }
+        
+        .heart:after {
+            top: 0;
+            left: -7.5px;
+        }
+        
+        /* Decoration elements */
+        .decoration {
+            position: absolute;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        .decoration.top-left {
+            top: 20px;
+            left: 20px;
+            font-size: 40px;
+            transform: rotate(-20deg);
+        }
+        
+        .decoration.bottom-right {
+            bottom: 20px;
+            right: 20px;
+            font-size: 40px;
+            transform: rotate(20deg);
+        }
+        
+        .qr-section {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .qr-title {
+            font-family: Futura, 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .qr-code {
+            display: inline-block;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        
+        .qr-caption {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        <span class="decoration top-left">♥</span>
+        <span class="decoration bottom-right">♥</span>
+        
+        <h1>My Letter To You</h1>
+        
+        <div class="date">On your special day</div>
+        
+        <div class="greeting">Minja, my love,</div>
+        
+        <div class="letter-content">
+            <p>I don't even know where to start because there's so much I could say about you. We met when we were just 16 and 17, and since then, watching you grow into the wonderful 20 year old young lady you are has been one of the most incredible things I've ever experienced. You've come so far, and I'm so damn proud of you. The way you carry yourself, the way you push forward no matter what, and the way you keep becoming a stronger, more confident version of yourself is honestly inspiring.</p>
+            
+            <p>We've been through a lot together. Ups, downs, moments that tested us, and moments that made everything worth it. But if I had to go through all of it again, I wouldn't change a thing. Every experience, every challenge, every memory—we went through it together, and I wouldn't want it to be with anyone else. No one else could ever be you. No one else could ever make me feel the way you do.</p>
+            
+            <p>You are such a wonderful, caring person, and I don't know if you even realize how much I appreciate you. The way you look out for the people you love, the way you stand your ground, and the way you bring this energy into a room, it's something special. You have this confidence, this boldness, and it's one of the things I love most about you. You don't hold back, you go after what you want, and you own who you are. That's something I'll always admire about you.</p>
+            
+            <p>And let's be honest…you're cool as hell. Like, actually. There's just something about the way you move through life that makes you stand out. You've got this vibe that's just… you. No one else can match it, and that's what makes you, you.</p>
+            
+            <p>So, happy birthday, baby. I hope today and this year is everything you want it to be and more, because if anyone deserves it, it's you. I love you.</p>
+        </div>
+        
+        <div class="signature">Love, B.</div>
+        
+        <div class="qr-section">
+            <h2 class="qr-title">I made something special for you</h2>
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.youtube.com/shorts/Ay0Y9ahRCeU" alt="Birthday Video QR Code" width="200" height="200">
+            </div>
+            <p class="qr-caption">Scan this QR code on your phone to see your birthday surprise!</p>
+        </div>
+        
+        <a href="index.html" class="back-link">Back to surprise</a>
+    </div>
+    
+    <script>
+        // Create background hearts
+        window.onload = function() {
+            const hearts = document.createElement('div');
+            hearts.className = 'hearts';
+            document.body.appendChild(hearts);
+            
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                
+                const size = Math.random() * 10 + 5;
+                const opacity = Math.random() * 0.2;
+                
+                heart.style.width = `${size}px`;
+                heart.style.height = `${size}px`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                heart.style.opacity = opacity;
+                
+                hearts.appendChild(heart);
+                
+                // Set before and after elements size
+                const computedStyle = getComputedStyle(heart);
+                const halfSize = parseInt(computedStyle.width) / 2;
+                
+                heart.querySelectorAll(':before, :after').forEach(el => {
+                    el.style.width = `${size}px`;
+                    el.style.height = `${size}px`;
+                });
+            }
+        };
+    </script>
+</body>
+</html>
