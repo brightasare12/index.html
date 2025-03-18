@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: fall linear;
+            z-index: -1;
+        }
+        
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh);
+            }
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        
+        h1 {
+            font-family: Futura, 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #ff6b95;
+            text-shadow: 3px 3px 0px rgba(255, 107, 149, 0.2);
+            animation: bounce 1s ease infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        
+        .letter-link {
+            display: inline-block;
+            margin: 30px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .letter-link:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        .letter-icon {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            margin: 0 auto;
+        }
+        
+        .letter-icon:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #efefef;
+            border-radius: 12px 12px 0 0;
+            z-index: 0;
+        }
+        
+        .heart-seal {
+            width: 50px;
+            height: 50px;
+            background-color: #80bfff;
+            transform: rotate(45deg);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .heart-seal:before,
+        .heart-seal:after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: #80bfff;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .heart-seal:before {
+            top: -25px;
+            left: 0;
+        }
+        
+        .heart-seal:after {
+            top: 0;
+            left: -25px;
+        }
+        
+        .caption {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, 0px); }
+        }
+        
+        .footer {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .hearts {
+            position: absolute;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b95;
+            transform: rotate(45deg);
+            opacity: 0;
+            animation: float-up 4s linear infinite;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b95;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        
+        .heart:after {
+            top: 0;
+            left: -10px;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday!</h1>
+        
+        <p class="intro">I've created something special just for you. A little surprise to celebrate the amazing person you are and how much you mean to me.</p>
+        
+        <p class="intro">Click on the letter below to read a message from my heart to yours.</p>
+        
+        <a href="birthday-letter.html" class="letter-link">
+            <div class="letter-icon">
+                <div class="heart-seal"></div>
+            </div>
+            <p class="caption">Open My Letter</p>
+        </a>
+        
+        <div class="floating">
+            <p class="intro">Thank you for being you. For being the incredible person who brightens my days and makes life so much better.</p>
+        </div>
+        
+        <div class="footer">
+            <p>With all my love</p>
+        </div>
+    </div>
+    
+    <div class="hearts" id="hearts"></div>
+    
+    <script>
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#ff6b95', '#80bfff', '#ffe066', '#a5d6a7', '#b39ddb'];
+            const confettiCount = 100;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.background = color;
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.animationDelay = `${Math.random() * 5}s`;
+                
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    document.body.removeChild(confetti);
+                }, (parseInt(confetti.style.animationDuration) + parseInt(confetti.style.animationDelay)) * 1000);
+            }
+        }
+        
+        // Create floating hearts
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                
+                const size = Math.random() * 15 + 5;
+                const left = Math.random() * 100;
+                const animationDelay = Math.random() * 5;
+                const animationDuration = Math.random() * 2 + 3;
+                
+                heart.style.width = `${size}px`;
+                heart.style.height = `${size}px`;
+                heart.style.left = `${left}%`;
+                heart.style.bottom = '0';
+                heart.style.animationDelay = `${animationDelay}s`;
+                heart.style.animationDuration = `${animationDuration}s`;
+                
+                heart.style.opacity = Math.random() * 0.5 + 0.5;
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        // Run animations
+        window.onload = function() {
+            createConfetti();
+            createHearts();
+            
+            // Create new confetti periodically
+            setInterval(createConfetti, 5000);
+            
+            // Create new hearts periodically
+            setInterval(createHearts, 2000);
+        };
+    </script>
+</body>
+</html>
